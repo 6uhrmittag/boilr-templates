@@ -1,0 +1,9 @@
+{
+    "Name": "License Template",
+    "Author": "Marvin Heimbrodt",
+    "Year": "2019",
+    "License": [
+        "MIT",
+        "Apache Software License 2.0"
+    ]
+}

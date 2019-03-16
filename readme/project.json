@@ -1,0 +1,11 @@
+{
+  "Projectname": "Projectname",
+  "Author": "Marvin Heimbrodt",
+  "GithubUsername": "6uhrmittag",
+  "GithubReponame": "GithubReponame",
+  "logo_in_docs": "N",
+  "Travis": "N",
+  "License": [
+    "MIT"
+  ]
+}
