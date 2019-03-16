@@ -1,0 +1,12 @@
+name: {{ ProfilName }}
+title: {{ title }}
+maintainer: Marvin Heimbrodt
+copyright: Marvin Heimbrodt
+copyright_email: marvin@6uhrmittag.de
+license: MIT
+summary: {{ summary }}
+version: 0.1.0
+supports:
+  platform: os
+
+
