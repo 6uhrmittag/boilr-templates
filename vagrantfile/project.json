@@ -2,6 +2,8 @@
     "Name": "Vagrant Template",
     "Author": "Marvin Heimbrodt",
     "allog_password_login": "Y",
+    "puppetapply": "N",
+    "puppetagent": "N",
     "update_guestools": "N",
     "cachier_plugin": "Y",
     "show_vagrantUPmessage": "N"

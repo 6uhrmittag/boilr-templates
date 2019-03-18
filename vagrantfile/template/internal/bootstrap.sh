@@ -17,6 +17,15 @@ if [[ ! -z $REQUIREMENTS ]]; then
     apt-get install -y -q --no-install-recommends $REQUIREMENTS
 fi
 
+{{ if eq puppetagent "Y" }}
+if [[ ! -f '/opt/puppetlabs' ]]; then
+    cd /tmp
+    wget -O - https://raw.githubusercontent.com/petems/puppet-install-shell/master/install_puppet_6_agent.sh | sudo sh
+fi
+{{ end }}
+
+
+
 # remove banner
 if [[ -f '/etc/update-motd.d/50-motd-news' ]]; then
     rm /etc/update-motd.d/50-motd-news
