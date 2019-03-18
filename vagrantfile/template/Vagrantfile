@@ -55,7 +55,6 @@ Vagrant.configure(2) do |config|
     {{ end }}
 
     config.vm.provider "virtualbox" do |vb|
-
         vb.memory = 2048
         vb.cpus = 2
         vb.name = current_dir
