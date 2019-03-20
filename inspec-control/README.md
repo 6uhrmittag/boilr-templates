@@ -1,13 +1,30 @@
 # Template to generate a inSpec control with external .yml files.
-This control is useful  to create simple controls very fast.
-The control is prepared to check for packages and services - optionally ports that are listening.
+Create simple controls quickly.
+The control is prepared to check for:
+- packages
+- services
+    - ports(optional)
 
-Ideally one control should be used for each function.
+Create one control for each function-group like "webserver", "mysql".
 
-use directly inside `$inspecProfileDir`
+1. use directly inside `$inspecProfileDir`
 ````bash
 boilr template use inspec-control .
 ````
+
+2. add packages and services to files/$checkname.yml:
+$checkname_packages.yml:
+````yaml
+- package_name: curl
+````
+$checkname_services.yml:
+````yaml
+- service_name: sshd
+  port: 22
+````
+
+3. edit title and destription in $checkname.rb
+4. add manual checks : https://www.inspec.io/docs/reference/resources/
 
 ## demo
 ````bash
