@@ -1,5 +1,6 @@
 # Template to generate a inSpec control with external .yml files.
 Create simple controls quickly.
+
 The control is prepared to check for:
 - packages
 - services
@@ -13,6 +14,7 @@ boilr template use inspec-control .
 ````
 
 2. add packages and services to files/$checkname.yml:
+
 $checkname_packages.yml:
 ````yaml
 - package_name: curl
