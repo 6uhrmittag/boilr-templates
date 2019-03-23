@@ -6,7 +6,8 @@ This template generates a Vagrantfile including bootstrap script and optional Pu
 - `internal/destroy.bat` removes .vagrant dir + .log on Windows Host after `vagrant destroy`
 
 ## Puppet
-- `puppet/manifests/default.pp` Manifest to provision VM (Agent is required - answer `Y` during boilr to install agent on VM)
+Agent is required - answer `Y` during `boilr use` to auto-install agent on VM
+- `puppet/manifests/default.pp` Manifest to provision VM
 - `puppet/modules/` save modules here
 - `puppet/Puppetfile` (not used yet)
 
