@@ -1,6 +1,8 @@
 This template generates a Vagrantfile including bootstrap script and optional Puppetmanifest.
 
-SSH-Password-Login is enabled by default!
+## general
+- SSH-Password-Login is enabled by default!
+- `.gitignore` ignores `.vagrant/` + `*log`
 
 ## Scripts
 - `internal/bootstrap.sh` script runs at `vagrant up` + `vagrant reload`
