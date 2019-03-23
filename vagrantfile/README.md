@@ -1,5 +1,7 @@
 This template generates a Vagrantfile including bootstrap script and optional Puppetmanifest.
 
+SSH-Password-Login is enabled by default!
+
 ## Scripts
 - `internal/bootstrap.sh` script runs at `vagrant up` + `vagrant reload`
 - `internal/destroy.sh` action on VM before `vagrant destroy`
