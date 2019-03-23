@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-{{ if eq allog_password_login "Y" }}
-
+#{{ if eq allog_password_login "Y" }}
 # allow password login
 sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config
 sed -i 's/PasswordAuthentification no/PasswordAuthentification yes/g' /etc/ssh/sshd_config
 service ssh restart
-{{ end }}
-
+#{{ end }}
 
 #install requirements
 #REQUIREMENTS="git"
@@ -17,12 +15,12 @@ if [[ ! -z $REQUIREMENTS ]]; then
     apt-get install -y -q --no-install-recommends $REQUIREMENTS
 fi
 
-{{ if eq puppetagent "Y" }}
+#{{ if eq puppetagent "Y" }}
 if [[ ! -f '/opt/puppetlabs' ]]; then
     cd /tmp
     wget -O - https://raw.githubusercontent.com/petems/puppet-install-shell/master/install_puppet_6_agent.sh | sudo sh
 fi
-{{ end }}
+#{{ end }}
 
 
 
