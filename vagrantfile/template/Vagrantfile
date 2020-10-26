@@ -5,7 +5,10 @@ current_dir = File.basename(Dir.getwd)
 
 Vagrant.configure(2) do |config|
 
-    config.vm.box = "ubuntu/bionic64"
+    #config.vm.box = "bento/ubuntu-18.04"
+    #config.vm.box = "bento/ubuntu-16.04"
+    config.vm.box = "bento/ubuntu-20.04"
+    #config.vm.box = "bento/centos-8.0"
 
     ## Config Plugins
     {{ if eq update_guestools "Y" }}
@@ -65,14 +68,19 @@ Vagrant.configure(2) do |config|
     # config.vm.network "private_network", ip: "192.168.50.4"
     config.vm.hostname
     config.vm.provider "virtualbox" do |vb|
-        vb.memory = 2 * 1024
-        vb.cpus = 2
+        vb.memory = 3 * 1024
+        vb.cpus = 4
         vb.name = current_dir
 
         # performance tweak
         vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
         vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000 ]
+
+        # User Hyper-V if on Windows
+        if Vagrant::Util::Platform.windows? then
+            vb.customize ["modifyvm", :id, "--paravirtprovider", "hyperv"]
+        end
     end
 
     {{ if eq puppetapply "Y" }}
