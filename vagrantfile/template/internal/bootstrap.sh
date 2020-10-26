@@ -8,8 +8,7 @@ service ssh restart
 #{{ end }}
 
 #install requirements
-#REQUIREMENTS="git"
-REQUIREMENTS=""
+REQUIREMENTS="bash-completion"
 if [[ ! -z $REQUIREMENTS ]]; then
     apt-get update
     apt-get install -y -q --no-install-recommends $REQUIREMENTS
