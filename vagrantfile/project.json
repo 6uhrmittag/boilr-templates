@@ -1,6 +1,7 @@
 {
     "Name": "Vagrant Template",
     "Author": "Marvin Heimbrodt",
+    "redhat": "N",
     "allog_password_login": "Y",
     "puppetapply": "N",
     "puppetagent": "N",
